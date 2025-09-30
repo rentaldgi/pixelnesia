@@ -1,13 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const SosialMediaDropdown = () => {
+const SosialMediaDropdown = ({ entity }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [admins, setAdmins] = useState([]);
 
   const toggleDropdown = (dropdownName) => {
     setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+    useEffect(() => {
+    const fetchAdmins = async () => {
+      try {
+        const res = await fetch("https://backend.ptdahliaglobalindo.id/whatsapp-admins"); 
+        const data = await res.json();
+        setAdmins(data);
+      } catch (err) {
+        console.error("Failed to load admins", err);
+      }
+    };
+    fetchAdmins();
+  }, []);
+
+  const handleWhatsappClick = async (admin) => {
+    try {
+      await fetch("https://backend.ptdahliaglobalindo.id/whatsapp-clicks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          adminId: admin.id,
+          entity: admin.entity,
+        }),
+      });
+
+      window.open(`https://wa.me/${admin.phoneNumber}`, "_blank");
+    } catch (err) {
+      console.error("Error logging click", err);
+      window.open(`https://wa.me/${admin.phoneNumber}`, "_blank");
+    }
   };
 
   return (
@@ -20,7 +52,7 @@ const SosialMediaDropdown = () => {
           className="flex items-center justify-between w-full px-4 py-3 text-green-700 font-semibold"
         >
           <div className="flex items-center gap-2">
-            <Image src="/images/logos_whatsapp-icon.png" alt="WhatsApp" width={20} height={20} />
+            <Image src="/images/logos_whatsapp-icon.png" alt="WhatsApp Icon" width={20} height={20} />
             WhatsApp
           </div>
           <span className={`transition-transform ${activeDropdown === "whatsapp" ? "rotate-180" : ""}`}>
@@ -29,28 +61,20 @@ const SosialMediaDropdown = () => {
         </button>
         <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "whatsapp" ? "max-h-[500px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
-            <div>
-              <div className="font-semibold">Jakarta, Bekasi & Bandung</div>
-              <a
-                href="https://wa.me/628153135669"
-                target="_blank"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
-              >
-                (+62) 877 1541 0084
-              </a>
-            </div>
-            <hr className="border-t border-green-400" />
-            <div>
-              <div className="font-semibold">Bali, Malang, Purwokerto & Surabaya</div>
-              <a
-                href="https://wa.me/6287715410084"
-                target="_blank"
-                className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
-              >
-                (+62) 815 3135 669
-              </a>
-            </div>
-            <hr className="border-t border-green-400" />
+            {admins
+              .filter(admin => admin.entity === entity) // filter per project entity
+              .map(admin => (
+                <div key={admin.id}>
+                  <div className="font-semibold">{admin.name}</div>
+                  <button
+                    onClick={() => handleWhatsappClick(admin)}
+                    className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
+                  >
+                    (+62) {admin.phoneNumber}
+                  </button>
+                  <hr className="border-t border-green-400 my-2" />
+                </div>
+              ))}
           </div>
         </div>
       </div>

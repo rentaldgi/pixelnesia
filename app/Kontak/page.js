@@ -200,7 +200,7 @@ const Kontak = () => {
               </h2>
             </div>
             <div className="flex flex-col gap-4 w-full max-w-sm mx-auto md:mx-0">
-              <SosialMediaDropdown />
+              <SosialMediaDropdown entity="RENTAL_IPHONE" />
             </div>
           </div>
           <div className="mt-16">

@@ -11,7 +11,7 @@
 @theme inline {
   --baterai-background: var(--background);
   --baterai-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -24,8 +24,8 @@
 
 body {
   background: var(--background);
-  baterai: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  font-family: var(--font-poppins);
 }
 
 
@@ -57,7 +57,7 @@ body {
   left: 10%;
   z-index: 3;
   max-width: 600px;
-  baterai: #0f172a;
+  color: #0f172a;
 }
 
 .hero-content h2 {

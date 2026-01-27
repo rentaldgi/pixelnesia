@@ -44,8 +44,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`px-4 py-2 text-sm font-semibold transition-all ${
                   isActive
-                    ? 'bg-white text-red-600 rounded-b-xl shadow-md -mt-4'
-                    : 'text-black hover:text-red-600'
+                    ? 'bg-white text-black rounded-b-xl shadow-md -mt-4'
+                    : 'text-black hover:text-gray-600'
                 }`}
               >
                 {item.label}
@@ -74,8 +74,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`block px-3 py-2 rounded text-sm font-semibold ${
                   isActive
-                    ? 'bg-white text-red-600'
-                    : 'text-black hover:text-red-600'
+                    ? 'bg-white text-black'
+                    : 'text-black hover:text-gray-600'
                 }`}
               >
                 {item.label}

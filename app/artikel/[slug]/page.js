@@ -18,9 +18,7 @@ export default function DetailArtikel() {
     fetch(`https://backend.ptdahliaglobalindo.id/article/${slug}`)
       .then((res) => res.json())
       .then((data) => setArtikel(data))
-      .catch((err) => {
-        console.error("Gagal mengambil data artikel:", err);
-      })
+      .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, [slug]);
 
@@ -43,47 +41,58 @@ export default function DetailArtikel() {
   return (
     <div className="bg-white min-h-screen">
       <Navbar />
+
       <AnimatePage>
+        {/* HEADER IMAGE */}
         <div className="relative">
           <Image
-            src="/images/bgdetailartikel.png"
+            src="/images/wp1.jpg"
             alt="Header"
             width={1920}
             height={320}
-            className="w-full object-cover h-48 sm:h-64 md:h-[320px]"
+            className="w-full h-44 sm:h-56 md:h-[320px] object-cover"
           />
+
+          {/* BACK BUTTON */}
           <button
             onClick={() => window.history.back()}
-            className="absolute top-4 sm:top-8 left-4 sm:left-8 bg-white/90 text-black px-3 py-2 sm:px-3 sm:py-3 rounded-full shadow font-medium flex items-center gap-1 sm:gap-2 hover:bg-gray-100 transition text-sm sm:text-base"
+            className="absolute top-6 left-4 sm:top-10 sm:left-30 bg-white/90 backdrop-blur px-6 py-2 rounded-full shadow flex items-center gap-2 text-sm sm:text-base hover:bg-gray-100 transition"
           >
-            <HiArrowLeft className="text-lg sm:text-xl" />
-            <span className="hidden sm:inline"></span>
+            <HiArrowLeft className="text-lg" />
+            <h2 className="text-md xs:hidden font-medium"> Kembali </h2>
           </button>
         </div>
 
-        <div className="relative z-10 -mt-32 sm:-mt-40 md:-mt-48 px-4 sm:px-6 md:px-8 lg:px-20 mb-12">
-          <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-sm border border-black-300 rounded-md shadow-lg py-6 sm:py-8 px-4 sm:px-6 md:px-8">
+        {/* CONTENT CARD */}
+        <div className="relative z-10 -mt-24 sm:-mt-28 md:-mt-50 px-4 sm:px-6 md:px-10 lg:px-20 mb-14">
+          <div className="max-w-5xl mx-auto bg-white/95 backdrop-blur border border-gray-200 rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
+
+            {/* THUMBNAIL */}
             <Image
               src={`https://backend.ptdahliaglobalindo.id${artikel.data.thumbnail}`}
               alt="Gambar Artikel"
               width={1280}
-              height={400}
-              className="w-full h-48 sm:h-64 md:h-72 object-cover rounded mb-6"
+              height={500}
+              className="w-full h-40 sm:h-56 md:h-72 object-cover rounded-lg mb-6"
             />
 
-            <div>
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-4">
-                {artikel.data.title}
-              </h1>
+            {/* TITLE */}
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-4 leading-snug">
+              {artikel.data.title}
+            </h1>
+
+            {/* CONTENT */}
+            <div className="space-y-4">
               {(artikel.data.content || "").split("\n").map((p, i) => (
                 <p
                   key={i}
-                  className="text-gray-700 text-sm sm:text-base mb-4 text-justify leading-relaxed"
+                  className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify"
                 >
                   {p.trim()}
                 </p>
               ))}
             </div>
+
           </div>
         </div>
 
@@ -91,4 +100,4 @@ export default function DetailArtikel() {
       </AnimatePage>
     </div>
   );
-}
+} 

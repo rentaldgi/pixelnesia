@@ -88,20 +88,21 @@ export default function Artikel() {
       <Navbar />
       <AnimatePage>
         {/* Header Section */}
-        <div className="bg-white px-4 sm:px-8 md:px-20 py-8">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div className="flex-1">
-              <h1 className="text-2xl md:text-3xl font-bold text-black mb-4">
+        <div className="bg-white px-4 sm:px-8 md:px-20 py-10 md:py-14">
+          <div className="flex flex-col lg:flex-row justify-between gap-6 items-center lg:items-start w-[90%] md:w-[94%] mx-auto">
+            
+            {/* Text */}
+            <div className="flex-1 text-center lg:text-left w-[90%] mx-auto lg:mx-0">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black mb-2">
                 ARTIKEL KAMI
               </h1>
-              <p className="text-gray-600 text-sm md:text-base max-w-2xl text-left leading-relaxed tracking-wide">
-                Pixelnesia aktif menginformasikan berbagai kegiatan untuk
-                <span className="hidden md:inline"><br /></span>{' '}
-                meningkatkan kualitas layanan di bidang rental
+              <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Pixelnesia aktif menginformasikan berbagai kegiatan untuk meningkatkan kualitas layanan di bidang rental melalui Artikel
               </p>
             </div>
 
-            <div className="w-full lg:w-auto lg:min-w-[300px]">
+            {/* Search */}
+            <div className="w-[90%] mx-auto lg:mx-0 lg:w-[300px] md:mt-10">
               <div className="flex items-center bg-gray-100 rounded-full px-4 py-3">
                 <input
                   type="text"
@@ -111,25 +112,26 @@ export default function Artikel() {
                     setSearchTerm(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="bg-transparent outline-none text-black text-sm md:text-base w-full"
+                  className="bg-transparent outline-none text-black text-sm w-full"
                 />
-                <FaSearch className="text-gray-500 text-lg ml-2" />
+                <FaSearch className="text-gray-500 text-base ml-2" />
               </div>
             </div>
+
           </div>
         </div>
 
         {/* Articles Grid */}
-        <div className="bg-[#FFDD00] px-4 sm:px-8 md:px-20 py-12 shadow-xl min-h-[50vh]">
+        <div className="bg-white px-4 sm:px-8 md:px-20 min-h-[50vh] mb-10">
           {filteredArticles.length === 0 ? (
             <div className="text-center text-white text-base py-10">
               Tidak ada artikel yang cocok dengan pencarian.
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-[94%] items-center mx-auto">
               {currentArticles.map((article) => (
                 <Link href={`/artikel/${article.slug}`} key={article.id}>
-                  <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 shadow-xl flex flex-col h-[320px]">
+                  <div className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 shadow-md flex flex-col h-[320px] border-2 border-gray-200">
                     <div className="w-full h-40 relative">
                       <Image
                         src={`https://backend.ptdahliaglobalindo.id${article.thumbnail}`}
@@ -148,7 +150,7 @@ export default function Artikel() {
                           {article.content}
                         </p>
                       </div>
-                      <p className="text-xs text-gray-500 text-right mt-auto">
+                      <p className="text-xs text-gray-500 text-right">
                         {formatTanggalIndo(article.publishedAt)}
                       </p>
                     </div>
@@ -171,7 +173,7 @@ export default function Artikel() {
                 &lt;
               </button>
 
-              <span className="text-sm font-semibold text-white">
+              <span className="text-sm font-semibold text-black">
                 {currentPage} / {totalPages}
               </span>
 

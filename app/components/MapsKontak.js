@@ -117,27 +117,29 @@ export default function MapsKontak() {
           ))}
         </div>
 
-        <div className="flex justify-center items-center gap-4 mt-8">
-          <div className="bg-yellow-300 rounded-full px-5 py-2 shadow-md flex gap-4">
+        <div className="flex justify-center mt-10">
+          <div className="flex items-center gap-6 bg-yellow-300 px-6 text-black py-2 rounded-full shadow">
             <button
               onClick={prev}
               disabled={startIndex === 0}
-              className={`text-blue-800 text-3xl font-bold ${
-                startIndex === 0 ? "opacity-40 cursor-not-allowed" : ""
+              className={`text-2xl font-bold ${
+                startIndex === 0
+                  ? "opacity-40 cursor-not-allowed"
+                  : "hover:scale-110 transition"
               }`}
             >
-              &lt;
+              ‹
             </button>
             <button
               onClick={next}
               disabled={startIndex + itemsPerView >= locations.length}
-              className={`text-blue-800 text-3xl font-bold ${
+              className={`text-2xl font-bold ${
                 startIndex + itemsPerView >= locations.length
                   ? "opacity-40 cursor-not-allowed"
-                  : ""
+                  : "hover:scale-110 transition"
               }`}
             >
-              &gt;
+              ›
             </button>
           </div>
         </div>

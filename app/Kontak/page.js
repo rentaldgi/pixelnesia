@@ -100,25 +100,24 @@ const Kontak = () => {
 
       {/* Header */}
       <section className="px-6 md:px-20 pt-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-start gap-6">
+        <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
           <div>
-            <p className="text-xl text-gray-800">
+            <h2 className="text-2xl md:text-3xl font-bold text-black mb-3">
+              Kontak Kami
+            </h2>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
               Punya pertanyaan atau ingin melakukan pemesanan? Jangan ragu untuk
-              menghubungi kami secara langsung. Dengan senang hati kami membantu
-              segala kebutuhan Anda seputar penyewaan.
+              menghubungi kami. Kami siap membantu kebutuhan Anda seputar penyewaan
             </p>
           </div>
-          {/* Judul Kontak */}
-        <div className="text-center md:text-center hidden md:block">
-          <h2 className="text-2xl font-bold text-black">Kontak Kami</h2>
-        </div>
         </div>
       </section>
 
       {/* Form */}
       <section className="bg-[#EECE21] mt-12 px-6 md:px-20 py-14">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          <form onSubmit={handleSubmit} className="space-y-4 z-20">
+        <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <form onSubmit={handleSubmit} className="space-y-5 z-20 w-full md:w-[80%] md:justify-self-start">
             <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
@@ -126,9 +125,9 @@ const Kontak = () => {
                 placeholder="Nama"
                 value={form.nama}
                 onChange={handleChange}
-                className="w-full md:w-1/2 p-3 rounded-full bg-white text-sm text-black dark:text-black outline-none"
+                  className="w-full md:w-1/2 p-3 rounded-full bg-white text-sm text-black dark:text-black outline-none"
               />
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-1/2]">
                 <input
                   type="text"
                   name="telepon"
@@ -169,19 +168,19 @@ const Kontak = () => {
             <button
               type="submit"
               disabled={isSending}
-              className="bg-black hover:bg-red-800 text-[#EECE21] w-full py-2 px-6 rounded-b-full font-semibold"
+              className="bg-black hover:bg-red-800 text-white w-full py-2 px-6 rounded-b-full font-semibold"
             >
               {isSending ? "Mengirim..." : "Kirim Email"}
             </button>
           </form>
 
           {/* Ilustrasi */}
-          <div className="flex justify-center items-end h-full md:h-[300px] mt-6 md:mt-0">
+          <div className="flex justify-center items-end h-full md:h-[280px] right-100 mt-6 md:mt-0">
             <Image
               src="/images/icon-kontakkami.png"
               alt="Ilustrasi Kontak"
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               className="max-w-[220px] md:max-w-sm object-contain drop-shadow-lg"
             />
           </div>
@@ -189,23 +188,37 @@ const Kontak = () => {
       </section>
 
       {/* Sosial Media + Maps */}
-      <section className="relative bg-[url('/images/bg_kontakkami.png')] bg-cover bg-center py-16 px-6 text-white -mt-5">
-        <div className="absolute inset-0 bg-black/60 z-0" />
+      <section className="relative bg-[url('/images/wp5.jpg')] bg-cover bg-center py-16 px-4 sm:px-6 text-white -mt-5 w-full">
+        <div className="absolute inset-0 bg-black/60 z-0 w-full" />
+
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
-                Mari Kunjungi Sosial <br />
-                Media Pixelnesia
+          
+          {/* Row utama */}
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            
+            {/* Kiri - Text */}
+            <div className="w-full md:w-1/2 text-left">
+              <h2 className="md:text-3xl text-xl sm:text-4xl font-bold leading-tight mb-4 text-center md:text-left">
+                Mari Kunjungi <br />
+                Sosial Media Pixelnesia
               </h2>
+              <p className="text-md text-gray-200 max-w-lg text-center md:text-left">
+                Dapatkan update promo, unit terbaru, dan informasi menarik lainnya.
+              </p>
             </div>
-            <div className="flex flex-col gap-4 w-full max-w-sm mx-auto md:mx-0">
+
+            {/* Kanan - Dropdown */}
+            <div className="w-full md:w-auto md:ml-auto">
               <SosialMediaDropdown entity="RENTAL_IPHONE" />
             </div>
+
           </div>
-          <div className="mt-16">
+
+          {/* Maps */}
+          <div className="mt-12 w-full">
             <MapsKontak />
           </div>
+
         </div>
       </section>
 

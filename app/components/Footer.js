@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-white text-black overflow-hidden">
+    <footer className="relative bg-white text-black overflow-hidden border-t-2 border-yellow-100 shadow-md">
       {/* Ornamen kiri atas */}
       <div className="absolute top-0 left-0 z-0 w-32 sm:w-40 md:w-[300px] lg:w-[400px]">
         <Image
@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
 
       {/* Isi utama */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="relative z-10 w-[94%] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Kolom 1: Sosial & Bank */}
         <div className="flex flex-col items-start gap-6">
           {/* Ikon Media Sosial */}
@@ -97,8 +97,8 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              <a href="https://wa.me/628153135669" className="hover:text-yellow-500">
-                (+62) 815 3135 669 
+              <a href="https://wa.me/6285899899948" className="hover:text-yellow-500">
+                (+62) 858-9989-9948  
               </a>
             </p>
             <Link href="/Kontak">
@@ -131,8 +131,8 @@ export default function Footer() {
       </div>
 
       {/* Footer bawah */}
-      <div className="bg-[#FFDD00] py-3 text-center text-xs text-black font-medium">
-        © 2025 PT Dahlia Global Indo. Seluruh hak cipta dilindungi undang-undang.
+      <div className="bg-[#FFDD00] justify-center items-center flex py-4">
+        <p className="w-[90%] text-center text-xs text-black font-medium"> © 2025 PT Dahlia Global Indo. Seluruh hak cipta dilindungi undang-undang </p>
       </div>
     </footer>
   );

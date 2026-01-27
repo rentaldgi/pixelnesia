@@ -22,18 +22,18 @@ export const generateWhatsAppLink = (unit) => {
     //   Bali, Malang, Purwokerto, Surabaya: ['6287715410084'],
     // };
     const adminByDaerah = {
-      Jakarta: ['628153135669'],
-      Bekasi: ['628153135669'],
-      Bandung: ['628153135669'],
-      Bali: ['6287715410084'],
-      Malang: ['6287715410084'],
-      Purwokerto: ['6287715410084'],
-      Surabaya: ['6287715410084'],
+      Jakarta: ['6285899899948'],
+      Bekasi: ['6285899899948'],
+      Bandung: ['6285899899948'],
+      Bali: ['6285899899948'],
+      Malang: ['6285899899948'],
+      Purwokerto: ['6285899899948'],
+      Surabaya: ['6285899899948'],
     };
 
 
     const nomorAdminList = adminByDaerah[unit.daerah];
-    const defaultAdmin = '628153135669';
+    const defaultAdmin = '6285899899948';
     let nomorAdmin = nomorAdminList?.[0] || defaultAdmin;
 
     // Validasi nomor

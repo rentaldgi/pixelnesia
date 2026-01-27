@@ -70,7 +70,7 @@ const SosialMediaDropdown = ({ entity }) => {
                     onClick={() => handleWhatsappClick(admin)}
                     className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
                   >
-                    (+62) {admin.phoneNumber}
+                    {admin.phoneNumber}
                   </button>
                   <hr className="border-t border-green-400 my-2" />
                 </div>

@@ -230,7 +230,7 @@ export const iphoneUnits = [
     daerah: ["Jakarta, ", "Bandung, ", "Malang, ", "Bali, ", "Purwokerto, ", "Surabaya, ", "Bekasi, ", "Tangerang, ", "Cikarang"],
     kebutuhan: "Dekat",
     Warna: "Request",
-    status: "Tersedia",
+    status: "Tersedia", 
     weight: "-",
     weekdayPrice: "450.000",
     weekendPrice: "550.000",

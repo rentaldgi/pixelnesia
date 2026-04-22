@@ -11,10 +11,10 @@ const SosialMediaDropdown = ({ entity }) => {
     setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
-    useEffect(() => {
+  useEffect(() => {
     const fetchAdmins = async () => {
       try {
-        const res = await fetch("https://backend.ptdahliaglobalindo.id/whatsapp-admins"); 
+        const res = await fetch("https://backend.ptdahliaglobalindo.id/whatsapp-admins");
         const data = await res.json();
         setAdmins(data);
       } catch (err) {
@@ -42,6 +42,22 @@ const SosialMediaDropdown = ({ entity }) => {
     }
   };
 
+  // tambahan manual wa
+  const manualWhatsapps = [
+    {
+      name: "Jakarta / Bekasi / Bandung",
+      phoneNumber: "6285899899948",
+    },
+    {
+      name: "Bekasi / Cikarang / Tangerang",
+      phoneNumber: "6285655551460",
+    },
+    {
+      name: "Malang / Purwokerto / Surabaya / Bali",
+      phoneNumber: "628153135669",
+    },
+  ];
+
   return (
     <div className="flex flex-col items-center md:items-start gap-4 w-full">
 
@@ -59,10 +75,13 @@ const SosialMediaDropdown = ({ entity }) => {
             &#9650;
           </span>
         </button>
-        <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "whatsapp" ? "max-h-[500px]" : "max-h-0"}`}>
+
+        <div className={`transition-all duration-300 overflow-hidden ${activeDropdown === "whatsapp" ? "max-h-[700px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
+
+            {/* FROM BACKEND */}
             {admins
-              .filter(admin => admin.entity === entity) // filter per project entity
+              .filter(admin => admin.entity === entity)
               .map(admin => (
                 <div key={admin.id}>
                   <div className="font-semibold">{admin.name}</div>
@@ -75,6 +94,21 @@ const SosialMediaDropdown = ({ entity }) => {
                   <hr className="border-t border-green-400 my-2" />
                 </div>
               ))}
+
+            {/* MANUAL TAMBAHAN */}
+            {manualWhatsapps.map((admin, index) => (
+              <div key={`manual-${index}`}>
+                <div className="font-semibold">{admin.name}</div>
+                <button
+                  onClick={() => window.open(`https://wa.me/${admin.phoneNumber}`, "_blank")}
+                  className="inline-block bg-green-600 text-white px-4 py-2 rounded-full mt-1 text-sm"
+                >
+                  62{admin.phoneNumber.slice(2)}
+                </button>
+                <hr className="border-t border-green-400 my-2" />
+              </div>
+            ))}
+
           </div>
         </div>
       </div>
@@ -93,28 +127,29 @@ const SosialMediaDropdown = ({ entity }) => {
             &#9650;
           </span>
         </button>
-        <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "tiktok" ? "max-h-[500px]" : "max-h-0"}`}>
+
+        <div className={`transition-all duration-300 overflow-hidden ${activeDropdown === "tiktok" ? "max-h-[500px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
               {
                 area: "Jakarta",
-                users: [{ handle: "@ig_pixelnesia.jkt", link: "https://www.tiktok.com/@ig_pixelnesia.jkt?_t=ZS-8yK510bzuvn&_r=1" }]
+                users: [{ handle: "@ig_pixelnesia.jkt", link: "https://www.tiktok.com/@ig_pixelnesia.jkt" }]
               },
               {
                 area: "Purwokerto",
-                users: [{ handle: "@pixelnesia.pwt", link: "https://www.tiktok.com/@pixelnesia.pwt?_t=ZS-8yK54FyQCPv&_r=1" }]
+                users: [{ handle: "@pixelnesia.pwt", link: "https://www.tiktok.com/@pixelnesia.pwt" }]
               },
               {
                 area: "Bali",
-                users: [{ handle: "@sewaiphone.pixelnesia", link: "https://www.tiktok.com/@sewaiphone.pixelnesia?_t=ZS-8yK55j7xSit&_r=1" }]
+                users: [{ handle: "@sewaiphone.pixelnesia", link: "https://www.tiktok.com/@sewaiphone.pixelnesia" }]
               },
               {
                 area: "Malang",
-                users: [{ handle: "@pixelnesia.malang", link: "https://www.tiktok.com/@pixelnesia.malang?_t=ZS-8yK578MBOl8&_r=1" }]
+                users: [{ handle: "@pixelnesia.malang", link: "https://www.tiktok.com/@pixelnesia.malang" }]
               },
               {
                 area: "Surabaya",
-                users: [{ handle: "@pixelnesia.sby", link: "https://www.tiktok.com/@pixelnesia.sby?_t=ZS-8yK5FkVHoM4&_r=1" }]
+                users: [{ handle: "@pixelnesia.sby", link: "https://www.tiktok.com/@pixelnesia.sby" }]
               },
             ].map((region, index) => (
               <div key={index}>
@@ -152,7 +187,8 @@ const SosialMediaDropdown = ({ entity }) => {
             &#9650;
           </span>
         </button>
-        <div className={`transition-all duration-300 ease-in-out overflow-hidden ${activeDropdown === "instagram" ? "max-h-[1000px]" : "max-h-0"}`}>
+
+        <div className={`transition-all duration-300 overflow-hidden ${activeDropdown === "instagram" ? "max-h-[1000px]" : "max-h-0"}`}>
           <div className="px-4 pb-4 pt-2 text-black space-y-4 text-sm">
             {[
               { area: "Pusat", users: [{ handle: "@pixelnesia.id", link: "https://instagram.com/pixelnesia.id" }] },

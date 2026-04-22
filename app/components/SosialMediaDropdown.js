@@ -45,15 +45,15 @@ const SosialMediaDropdown = ({ entity }) => {
   // tambahan manual wa
   const manualWhatsapps = [
     {
-      name: "Jakarta / Bekasi / Bandung",
+      name: "Jakarta, Bekasi & Bandung",
       phoneNumber: "6285899899948",
     },
     {
-      name: "Bekasi / Cikarang / Tangerang",
+      name: "Bekasi, Cikarang & Tangerang",
       phoneNumber: "6285655551460",
     },
     {
-      name: "Malang / Purwokerto / Surabaya / Bali",
+      name: "Malang, Purwokerto, Surabaya & Bali",
       phoneNumber: "628153135669",
     },
   ];

@@ -11,7 +11,7 @@ const locations = [
   {
     kota: "Bekasi",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.4163041348991!2d106.9594571!3d-6.2463269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d0a0e96d26d%3A0xc8a2ff0489301e1b!2sJl.%20Kedung%20Waringin%20No.8%2C%20Bekasi%20Timur!5e0!3m2!1sid!2sid!4v1721021582746!5m2!1sid!2sid",
-    alamat: "Jl. KH. Noer Ali, RT.001/RW.002, Pekayon Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17148",
+    alamat: "Pondok Surya Mandala RT 004 RW 013 Blok F1 No 18 , Jakamulya , Bekasi Selatan 17146",
     link: "https://maps.app.goo.gl/1WEKERBsTM7RcuAt8?g_st=com.google.maps.preview.copy"
   },
   {
@@ -29,8 +29,8 @@ const locations = [
   {
     kota: "Surabaya",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.663733666318!2d112.7354067759023!3d-7.391934172922382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4cb1a92b65%3A0xd002d29e96491af8!2sJl.%20Jimbar%20Ngawinan%20I%20No.31%2C%20Surabaya!5e0!3m2!1sid!2sid!4v1721021605541!5m2!1sid!2sid",
-    alamat: "Jl. Jemur Ngawinan I No.31, Jemur Wonosari, Kec. Wonocolo, Surabaya, Jawa Timur 60237",
-    link: "https://maps.app.goo.gl/vQ5wS9MzWDg6fgzY9?g_st=com.google.maps.preview.copy"
+    alamat: "Jl. Gayungan PTT Gg. Manggis No.28, RT.004/RW.02, Gayungan, Kec. Gayungan, Surabaya, Jawa Timur 60235",
+    link: "https://maps.app.goo.gl/DganCHPdCsuuqU2G9?g_st=com.google.maps.preview.copy"
   },
   {
     kota: "Purwokerto",
@@ -41,8 +41,8 @@ const locations = [
   {
     kota: "Malang",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.461707027334!2d112.6453554!3d-7.984129300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629b5b8e68f0d%3A0x7a92cada772737c0!2sMALANG%20RIDER%20(SEWA%20MOTOR%20MALANG)!5e1!3m2!1sid!2sid!4v1753943338389!5m2!1sid!2sid",
-    alamat: "Jl. Puntadewa III No.14, Polehan, Kec. Blimbing, Kota Malang, Jawa Timur 65121",
-    link: "https://maps.app.goo.gl/hPmba2duu9bNrZqG6"
+    alamat: "Jl.Kalimosodo IV no 7, Polehan, Blimbing, Kota Malang, Jawa Timur 65126",
+    link: "https://maps.app.goo.gl/YoXWpFobPGmFHXWg7?g_st=com.google.maps.preview.copy"
   }
 ];
 

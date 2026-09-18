@@ -8,38 +8,26 @@ import Footer from "../components/Footer";
 
 const testimonials = [
 {
-  name: "Riyadatunnisa",
-  role: "Mahasiswi",
   video: "/videos/testimoni-pixel-1.mp4",
   text: "iPhone-nya masih mulus banget! Baterai awet dan dapet charger asli. Pengambilan cepat dan sesuai lokasi, mantap dari Pixelnesia!",
 },
 {
-  name: "Ayu Nadya",
-  role: "Wisatawan",
   video: "/videos/testimoni-pixel-2.mp4",
   text: "Pertama kali nyoba rental iPhone, dan ternyata semudah itu. Barang bagus, ga ribet, dan pelayanan dari Pixelnesia sangat memuaskan!",
 },
+// {
+//   video: "/videos/testimoni-pixel-3.mp4",
+//   text: "Harga rental iPhone di Pixelnesia bener-bener bersahabat buat mahasiswa. iPhone-nya lancar banget dan baterai irit.",
+// },
+// {
+//   video: "/videos/testimoni-pixel-4.mp4",
+//   text: "Sewa iPhone buat tugas kuliah dan foto-foto, hasilnya jernih! Proses sewa mudah, tinggal klik di website Pixelnesia.",
+// },
+// {
+//   video: "/videos/testimoni-pixel-5.mp4",
+//   text: "Jalan-jalan di kota jadi makin seru pake iPhone dari Pixelnesia. Kameranya oke, performa kenceng, puas banget!",
+// },
 {
-  name: "Arkan Fauzan",
-  role: "Mahasiswa",
-  video: "/videos/testimoni-pixel-3.mp4",
-  text: "Harga rental iPhone di Pixelnesia bener-bener bersahabat buat mahasiswa. iPhone-nya lancar banget dan baterai irit.",
-},
-{
-  name: "Dhia Naomi",
-  role: "Mahasiswi",
-  video: "/videos/testimoni-pixel-4.mp4",
-  text: "Sewa iPhone buat tugas kuliah dan foto-foto, hasilnya jernih! Proses sewa mudah, tinggal klik di website Pixelnesia.",
-},
-{
-  name: "Arya Zaka",
-  role: "Wisatawan",
-  video: "/videos/testimoni-pixel-5.mp4",
-  text: "Jalan-jalan di kota jadi makin seru pake iPhone dari Pixelnesia. Kameranya oke, performa kenceng, puas banget!",
-},
-{
-  name: "Deni Lesmana",
-  role: "Mahasiswa",
   video: "/videos/testimoni-pixel-6.mp4",
   text: "Lagi libur semester, coba sewa iPhone buat konten. Ternyata dapet unit bagus banget, lengkap sama charger, dan support-nya fast response!",
 },
@@ -86,10 +74,10 @@ export default function Testimonials() {
               </div>
               <div className="flex items-center mt-3 justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="text-md font-semibold">{testimonials[currentIndex].name}</div>
-                  <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
+                  {/* <div className="text-md font-semibold">{testimonials[currentIndex].name}</div> */}
+                  {/* <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
                     {testimonials[currentIndex].role}
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="flex items-start justify-between mt-2 gap-4">
@@ -144,10 +132,10 @@ export default function Testimonials() {
                   </div>
                   <div className="flex items-center mt-3 justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="text-md font-semibold">{item.name}</div>
+                      {/* <div className="text-md font-semibold">{item.name}</div>
                       <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
                         {item.role}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="flex items-start justify-between mt-2 gap-4">

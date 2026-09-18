@@ -14,7 +14,7 @@ export default function Navbar() {
     { label: 'Beranda', href: '/' },
     { label: 'Artikel', href: '/artikel' },
     { label: 'Daftar Unit', href: '/DaftarUnit' },
-    { label: 'Testimoni', href: '/Testimoni' },
+    { label: 'Tentang Kami', href: '/TentangKami' },
     { label: 'Kontak', href: '/Kontak' },
   ]
 

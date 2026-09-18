@@ -55,7 +55,7 @@ export default function HomePage() {
               Pixelnesia
             </h1>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-              Nikmati pengalaman menggunakan smartphone <br className="hidden sm:block" />
+              Nikmati pengalaman menggunakan iPhone <br className="hidden sm:block" />
               terbaru tanpa beban biaya mahal. Sewa mudah, <br className="hidden sm:block" />
               cepat, dan aman
             </p>
@@ -75,7 +75,7 @@ export default function HomePage() {
             {[
               ["icon_pelayanan.png", "Pelayanan Terbaik"],
               ["icon_keamanan.png", "Keamanan Terjaga"],
-              ["icon_perawatan.png", "Perawatan Rutin"],
+              ["icon_lokasi.png", "Tersedia Diberbagai Kota"],
               ["icon_truk.png", "Cash On Delivery"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
@@ -162,7 +162,7 @@ export default function HomePage() {
                 Rental Iphone Indonesia
               </h3>
               <p className="text-sm sm:text-sm md:text-base leading-relaxed">
-                Sebagai bagian dari ekosistem layanan PT Dahlia Global Indo, Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang menginginkan akses mudah terhadap perangkat teknologi tanpa harus membeli. Pixelnesia menyediakan layanan rental Iphone yang fleksibel, ekonomis, dan terpercaya, cocok untuk berbagai kebutuhan pribadi maupun profesional.
+                Sebagai bagian dari ekosistem layanan Dahlia Group, Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang menginginkan akses mudah terhadap perangkat teknologi tanpa harus membeli. Pixelnesia menyediakan layanan rental Iphone yang fleksibel, ekonomis, dan terpercaya, cocok untuk berbagai kebutuhan pribadi maupun profesional.
                 <br />
                 <br />
                 Melalui Pixelnesia, pelanggan dapat menikmati kemudahan dalam menyewa Iphone, mulai dari proses pemesanan yang cepat, pilihan perangkat terbaru yang terawat, hingga dukungan layanan pelanggan yang sigap dan informatif. Komitmen PT Dahlia Global Indo dalam menghadirkan layanan unggulan tercermin dalam setiap aspek Pixelnesia, menjadikannya solusi cerdas untuk gaya hidup digital masa kini.

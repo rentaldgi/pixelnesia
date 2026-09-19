@@ -51,7 +51,7 @@ export default function DetailUnit() {
           <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
             {unit.description}
           </p>
-          <hr className="my-2 border-black" />
+          {/* <hr className="my-2 border-black" /> */}
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
@@ -85,22 +85,26 @@ export default function DetailUnit() {
 
             <div className="flex flex-row gap-6 md:gap-6 font-bold">
               <div className="flex flex-col">
+              <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
+                  Mulai dari
+                </span>
                 <span className="text-sm sm:text-base leading-tight">
                   Rp {unit.weekdayPrice}
                 </span>
-                <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
+                {/* <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
                   Weekday
-                </span>
+                </span> */}
               </div>
 
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
+              <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
+                  Mulai dari
+                </span>
                 <span className="text-sm sm:text-base leading-tight">
                   Rp {unit.weekendPrice}
                 </span>
-                <span className="text-[10px] sm:text-xs text-gray-600 font-normal">
-                  Weekend
-                </span>
-              </div>
+                
+              </div> */}
             </div>
           </div>
 
@@ -137,76 +141,76 @@ export default function DetailUnit() {
         </div>
 
       {/* Info bawah */}
-<div className="bg-yellow-300 text-black py-6 sm:py-10">
-  <div className="w-[94%] mx-auto px-4 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
-    
-    {/* Text */}
-    <div className="space-y-3 sm:space-y-4 leading-relaxed">
-      <p>
-        Unit iPhone yang kami sediakan hadir dengan kondisi fisik mulus dan performa optimal.
-        Semua perangkat menggunakan baterai yang sehat, respons layar yang baik, serta siap digunakan kapan saja.
-      </p>
-      <p>
-        Semua unit sudah dilengkapi dengan surat-surat resmi dan rutin diservis agar aman dan nyaman digunakan.
-      </p>
-      <p>
-        Sangat cocok untuk mobilitas harian, perjalanan, maupun kebutuhan kerja.
-      </p>
-      <p>
-      </p>
-      <p>
-      - Pixelnesia
-      </p>
-    </div>
+      {/* <div className="bg-yellow-300 text-black py-6 sm:py-10">
+        <div className="w-[94%] mx-auto px-4 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm"> */}
+          
+          {/* Text */}
+          {/* <div className="space-y-3 sm:space-y-4 leading-relaxed">
+            <p>
+              Unit iPhone yang kami sediakan hadir dengan kondisi fisik mulus dan performa optimal.
+              Semua perangkat menggunakan baterai yang sehat, respons layar yang baik, serta siap digunakan kapan saja.
+            </p>
+            <p>
+              Semua unit sudah dilengkapi dengan surat-surat resmi dan rutin diservis agar aman dan nyaman digunakan.
+            </p>
+            <p>
+              Sangat cocok untuk mobilitas harian, perjalanan, maupun kebutuhan kerja.
+            </p>
+            <p>
+            </p>
+            <p>
+            - Pixelnesia
+            </p>
+          </div> */}
 
-    {/* Tabel */}
-    <div className="flex justify-center md:justify-end items-start">
-  <div className="bg-white text-black rounded-md w-full max-w-md shadow-md overflow-hidden">
-    <table className="w-full border-collapse text-xs sm:text-sm">
-      <tbody>
-        <tr className="border-gray-100">
-          <td className="px-3 sm:px-4 py-3 font-semibold whitespace-nowrap">
-            Penyimpanan
-          </td>
-          <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-            {unit.Penyimpanan}
-          </td>
-        </tr>
+          {/* Tabel */}
+          {/* <div className="flex justify-center md:justify-end items-start">
+        <div className="bg-white text-black rounded-md w-full max-w-md shadow-md overflow-hidden">
+          <table className="w-full border-collapse text-xs sm:text-sm">
+            <tbody>
+              <tr className="border-gray-100">
+                <td className="px-3 sm:px-4 py-3 font-semibold whitespace-nowrap">
+                  Penyimpanan
+                </td>
+                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
+                  {unit.Penyimpanan}
+                </td>
+              </tr>
 
-        <tr className="bg-gray-100 border-gray-100">
-          <td className="px-3 sm:px-4 py-3 font-semibold">
-            Warna
-          </td>
-          <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-            {unit.Warna}
-          </td>
-        </tr>
+              <tr className="bg-gray-100 border-gray-100">
+                <td className="px-3 sm:px-4 py-3 font-semibold">
+                  Warna
+                </td>
+                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
+                  {unit.Warna}
+                </td>
+              </tr>
 
-        <tr className="border-gray-100">
-          <td className="px-3 sm:px-4 py-3 font-semibold">
-            Jaringan
-          </td>
-          <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-            {unit.jaringan}
-          </td>
-        </tr>
+              <tr className="border-gray-100">
+                <td className="px-3 sm:px-4 py-3 font-semibold">
+                  Jaringan
+                </td>
+                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
+                  {unit.jaringan}
+                </td>
+              </tr>
 
-        <tr className="bg-gray-100">
-          <td className="px-3 sm:px-4 py-3 font-semibold">
-            Kamera
-          </td>
-          <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
-            {unit.kamera}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              <tr className="bg-gray-100">
+                <td className="px-3 sm:px-4 py-3 font-semibold">
+                  Kamera
+                </td>
+                <td className="px-3 sm:px-4 py-3 text-right text-gray-700">
+                  {unit.kamera}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
   </div>
-</div>
-
-
-  </div>
-</div>
+</div> */}
 
 
       <Footer />

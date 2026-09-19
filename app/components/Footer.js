@@ -11,7 +11,7 @@ export default function Footer() {
         <Image
           src="/images/logo_footer1.png"
           alt="Ornamen Kiri"
-          layout="responsive"
+          // layout="responsive"
           width={400}
           height={200}
           className="object-contain"

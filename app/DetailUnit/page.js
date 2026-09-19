@@ -86,7 +86,7 @@ export default function DetailUnit() {
       </div>
 
       {/* Info + Tabel */}
-      <div className="bg-red-700 text-white px-10 py-8 grid md:grid-cols-2 gap-10 text-base">
+      {/* <div className="bg-red-700 text-white px-10 py-8 grid md:grid-cols-2 gap-10 text-base">
         <div className="space-y-4 leading-relaxed">
           <p>
             Unit motor yang kami sediakan hadir dengan tampilan elegan, menggunakan bahan bakar bensin, dan dalam kondisi prima...
@@ -112,7 +112,7 @@ export default function DetailUnit() {
             </table>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

@@ -7,14 +7,22 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const testimonials = [
-{
-  video: "/videos/testimoni-pixel-1.mp4",
-  text: "iPhone-nya masih mulus banget! Baterai awet dan dapet charger asli. Pengambilan cepat dan sesuai lokasi, mantap dari Pixelnesia!",
-},
-{
-  video: "/videos/testimoni-pixel-2.mp4",
-  text: "Pertama kali nyoba rental iPhone, dan ternyata semudah itu. Barang bagus, ga ribet, dan pelayanan dari Pixelnesia sangat memuaskan!",
-},
+  {
+    video: "/videos/testimoni-pixel-1.mp4",
+    name: "Fasilitas",
+    text: "Nikmati fasilitas lengkap untuk pengalaman sewa yang lebih nyaman, mulai dari charger hingga earphone yang tersedia bersama unit iPhone.",
+  },
+  {
+    video: "/videos/testimoni-pixel-2.mp4",
+    name: "Tipe iPhone",
+    text: "Tersedia berbagai pilihan tipe iPhone yang dapat disesuaikan dengan kebutuhan, mulai dari penggunaan sehari-hari hingga kebutuhan konten.",
+  },
+  {
+    video: "/videos/testimoni-pixel-6.mp4",
+    name: "Cabang Utama",
+    text: "Kunjungi cabang utama Pixelnesia untuk proses pengambilan dan pengembalian unit yang mudah, cepat, dan praktis.",
+  },
+];
 // {
 //   video: "/videos/testimoni-pixel-3.mp4",
 //   text: "Harga rental iPhone di Pixelnesia bener-bener bersahabat buat mahasiswa. iPhone-nya lancar banget dan baterai irit.",
@@ -27,11 +35,7 @@ const testimonials = [
 //   video: "/videos/testimoni-pixel-5.mp4",
 //   text: "Jalan-jalan di kota jadi makin seru pake iPhone dari Pixelnesia. Kameranya oke, performa kenceng, puas banget!",
 // },
-{
-  video: "/videos/testimoni-pixel-6.mp4",
-  text: "Lagi libur semester, coba sewa iPhone buat konten. Ternyata dapet unit bagus banget, lengkap sama charger, dan support-nya fast response!",
-},
-];
+
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +78,7 @@ export default function Testimonials() {
               </div>
               <div className="flex items-center mt-3 justify-between">
                 <div className="flex items-center gap-2">
-                  {/* <div className="text-md font-semibold">{testimonials[currentIndex].name}</div> */}
+                  <div className="text-md font-semibold">{testimonials[currentIndex].name}</div>
                   {/* <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
                     {testimonials[currentIndex].role}
                   </div> */}
@@ -132,8 +136,8 @@ export default function Testimonials() {
                   </div>
                   <div className="flex items-center mt-3 justify-between">
                     <div className="flex items-center gap-2">
-                      {/* <div className="text-md font-semibold">{item.name}</div>
-                      <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
+                      <div className="text-md font-semibold">{item.name}</div>
+                      {/* <div className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">
                         {item.role}
                       </div> */}
                     </div>

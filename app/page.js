@@ -75,7 +75,7 @@ export default function HomePage() {
             {[
               ["icon_pelayanan.png", "Pelayanan Terbaik"],
               ["icon_keamanan.png", "Keamanan Terjaga"],
-              ["icon_lokasi.png", "Tersedia Diberbagai Kota"],
+              ["icon_perawatan.png", "Tersedia Diberbagai Kota"],
               ["icon_truk.png", "Cash On Delivery"],
             ].map(([icon, label], i) => (
               <div key={i} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">

@@ -165,7 +165,7 @@ export default function HomePage() {
                 Sebagai bagian dari ekosistem layanan Dahlia Group, Pixelnesia hadir untuk menjawab kebutuhan masyarakat modern yang menginginkan akses mudah terhadap perangkat teknologi tanpa harus membeli. Pixelnesia menyediakan layanan rental Iphone yang fleksibel, ekonomis, dan terpercaya, cocok untuk berbagai kebutuhan pribadi maupun profesional.
                 <br />
                 <br />
-                Melalui Pixelnesia, pelanggan dapat menikmati kemudahan dalam menyewa Iphone, mulai dari proses pemesanan yang cepat, pilihan perangkat terbaru yang terawat, hingga dukungan layanan pelanggan yang sigap dan informatif. Komitmen PT Dahlia Global Indo dalam menghadirkan layanan unggulan tercermin dalam setiap aspek Pixelnesia, menjadikannya solusi cerdas untuk gaya hidup digital masa kini.
+                Melalui Pixelnesia, pelanggan dapat menikmati kemudahan dalam menyewa Iphone, mulai dari proses pemesanan yang cepat, pilihan perangkat terbaru yang terawat, hingga dukungan layanan pelanggan yang sigap dan informatif. Komitmen Dahlia Group dalam menghadirkan layanan unggulan tercermin dalam setiap aspek Pixelnesia, menjadikannya solusi cerdas untuk gaya hidup digital masa kini.
               </p>
           </div>
           <div className="flex-1 w-full sm:max-w-sm">
@@ -181,39 +181,32 @@ export default function HomePage() {
       </section>
 
       <section className="bg-yellow-300 text-black px-3 sm:px-6 md:px-8 py-8 sm:py-12">
-        <div className="w-[90%] md:w-[88%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
-              Kenapa Harus Memilih <br /> Pixelnesia?
-            </h2>
-            <div className="flex flex-col gap-3 sm:gap-4">
-              {[
-                ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
-                ["icon-kualitas.png", "Kualitas iPhone Terjamin dan Sudah Legal"],
-                ["icon-pembayaran.png", "Metode Pembayaran Aman dan Profesional"],
-              ].map(([icon, text], i) => (
-                <div
-                  key={i}
-                  className="bg-white text-black p-2 sm:p-3 rounded-xl shadow flex items-center gap-2 sm:gap-3 min-h-[70px] sm:min-h-[80px] md:min-h-[90px] w-full"
-                >
-                  <Image src={`/images/${icon}`} alt={text} width={64} height={64} className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 object-contain flex-shrink-0" />
-                  <p className="text-xs sm:text-sm md:text-base font-semibold leading-snug">{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="w-[90%] md:w-[88%] mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center leading-tight">
+            Kenapa Harus Memilih Pixelnesia?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {[
+              ["icon-syarat.png", "Syarat Sewa yang Ringan dan Tidak Ribet"],
               ["icon-verif.png", "Verifikasi Data Cepat dan Mudah"],
+              ["icon-kualitas.png", "Kualitas iPhone Terjamin dan Sudah Legal"],
               ["icon-terbuka.png", "Terbuka untuk Semua Kalangan"],
+              ["icon-pembayaran.png", "Metode Pembayaran Aman dan Profesional"],
               ["icon-cod.png", "Layanan Antar Jemput Fleksibel (COD)"],
+              ["icon-lokasi.png", "Tersedia di Berbagai Kota Besar di Indonesia"],
               ["icon-data.png", "Data Pribadi Pelanggan Terjamin Aman"],
             ].map(([icon, text], i) => (
               <div
                 key={i}
                 className="bg-white text-black p-2 sm:p-3 rounded-xl shadow flex items-center gap-2 sm:gap-3 min-h-[70px] sm:min-h-[80px] md:min-h-[90px] w-full"
               >
-                <Image src={`/images/${icon}`} alt={text} width={64} height={64} className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 object-contain flex-shrink-0" />
+                <Image
+                  src={`/images/${icon}`}
+                  alt={text}
+                  width={64}
+                  height={64}
+                  className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 object-contain flex-shrink-0"
+                />
                 <p className="text-xs sm:text-sm md:text-base font-semibold leading-snug">{text}</p>
               </div>
             ))}

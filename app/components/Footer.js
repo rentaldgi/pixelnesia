@@ -36,31 +36,14 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-6">
           {/* Ikon Media Sosial */}
           <div className="flex space-x-4">
-            {/* TikTok */}
-            <a
-              href="https://www.tiktok.com/@ig_pixelnesia.jkt?is_from_webapp=1&sender_device=pc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src="/images/icon_tt.png" alt="TikTok" width={32} height={32} className="w-8 h-8" />
-            </a>
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/6287715410084"
+              href="https://wa.me/6285899899948"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image src="/images/icon_wa.png" alt="WhatsApp" width={28} height={28} className="w-7 h-7" />
-            </a>
-
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/pixelnesia.id?utm_source=ig_web_button_share_sheet&igsh=MTFudWg1N2hhZGswbw=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src="/images/icon_ig.png" alt="Instagram" width={28} height={28} className="w-7 h-7" />
             </a>
           </div>
 
@@ -93,7 +76,7 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-800 mb-2">Kontak Kami</h4>
             <p>
               <a href="mailto:ptdahliglobalindo@gmail.com" className="hover:text-yellow-500">
-                ptdahliglobalindo@gmail.com
+                dahliagroup.id
               </a>
             </p>
             <p>
@@ -132,7 +115,7 @@ export default function Footer() {
 
       {/* Footer bawah */}
       <div className="bg-[#FFDD00] justify-center items-center flex py-4">
-        <p className="w-[90%] text-center text-xs text-black font-medium"> © 2025 PT Dahlia Global Indo. Seluruh hak cipta dilindungi undang-undang </p>
+        <p className="w-[90%] text-center text-xs text-black font-medium"> © 2026 Dahlia Group. Seluruh hak cipta dilindungi undang-undang </p>
       </div>
     </footer>
   );
